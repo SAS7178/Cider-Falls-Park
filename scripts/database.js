@@ -36,12 +36,12 @@ const database = {
         areaId:6
     }],
     Areas: [
-        { id: 1, name:"northeast", locations: "Chamfort River"},
-        { id: 2, name:"northern", locations: "Lost WolfHiking Trail"},
-        { id: 3, name:"northwest", locations: "Lodge"},
-        { id: 4, name:"southwest", locations: "Gander River"},
-        { id: 5, name:"southern", locations: "Campgrounds"},
-        { id: 6, name:"southeast", locations: "Pine Bluff Trails"}
+        { id: 1, location:"northeast",  name: "Chamfort River"},
+        { id: 2, location:"northern",  name: "Lost WolfHiking Trail"},
+        { id: 3, location:"northwest",  name: "Lodge"},
+        { id: 4, location:"southwest",  name: "Gander River"},
+        { id: 5, location:"southern",  name: "Campgrounds"},
+        { id: 6, location:"southeast", name: "Pine Bluff Trails"}
     ],
     AreaServices: [
         { id: 1, areaId:1, servicesId: 1},
