@@ -8,9 +8,9 @@ const guests = getGuest()
 export const Guests = () => {
     //create let var  
     let guestHTML = `<ul>`
-    // iterate through walkers
+    // iterate through guests
     for (const guest of guests) {
-        // add walker.name in HTML list <li>${walker.name}</li>
+        // add guest.name in HTML list <li>${guest.name}</li>
         guestHTML += `<li id="guest--${guest.id}">${guest.name}</li>`
     }
     // add </ul> at the end of the string of strings
@@ -19,7 +19,7 @@ export const Guests = () => {
     return guestHTML
 }
 
-//func to iterate how many guest are in each area
+//func to iterate how many guest are in each area takes an area an a para
  export const guestsPerArea = (area) => {
     let guestsOfArea = 0
     for (const guest of guests) {
@@ -27,6 +27,6 @@ export const Guests = () => {
            ++ guestsOfArea
     
         }
-        //returns array of areaId of guest
+        //returns array a value equal to the count of guest in an area
     } return guestsOfArea
 }

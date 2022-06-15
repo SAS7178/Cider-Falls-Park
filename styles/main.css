@@ -1,0 +1,70 @@
+.page_title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 5em;
+    font-family: fantasy;
+    margin-left: 2rem;
+}
+
+body{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+background-color: rgb(189, 237, 179);
+} 
+.area_title {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#0df695;
+}
+.area__card {
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid;
+    border-color: #23e090;
+    width: 20%;
+    padding-left: 2rem;
+}
+main{
+     display: flex;
+     justify-content: right;
+}
+
+.main_page {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+img {display: flex;
+    border-radius: 50%;
+    justify-content: space-between;
+}
+
+.areaList {    
+    display: flex;
+    flex-flow: row wrap;
+   justify-content: space-evenly;
+   width: 75%;
+   gap: 1em;
+   margin-top: 1em;
+   
+ }
+ 
+ .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #23e090;
+    margin-top: 2em;
+}
+
+
+
+
+.aside{
+  border: 3px solid;
+  border-color: #a0f4d2;
+  padding-left: 1rem;
+  width: 15%;
+}

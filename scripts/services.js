@@ -1,24 +1,22 @@
 import { getServices } from "./database.js";
 import { getAreaServices } from "./database.js";
-import { getAreas } from "./database.js";
-//set func to var
-const area = getAreas()
+// set functions to vars
 const areaServices = getAreaServices()
 const services = getServices()
 
 
   export const guestHTML = (area) => {
     let areaServicesId = []
-    //check if walker.id is in walkercity.walkerid
+    //iterate areaservices
     for (const areaService of areaServices) 
-    {
+    {//check area.id value to area services.areaid value
         if (area.id === areaService.areaId)
+        //if same push areaService.servicesId to array
         areaServicesId.push(areaService.servicesId)
     }
-    //returns array of areaservices.service.ids that are = to the area.id
+    //returns array of areaservices.servicesids 
     return areaServicesId
 }
-// const guestHTML = guestHTML()
 
 // func to create 
 export const servicesHTML = (filteredServices) => {
@@ -34,7 +32,6 @@ export const servicesHTML = (filteredServices) => {
     // returns string list of service names
     return serviceHTML
 }
-
 
 // function that receives a parameter of an area object and
 // returns an array with the id of each service offered

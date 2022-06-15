@@ -36,11 +36,17 @@ const database = {
         name: "Carol Baskin",
         email: "",
         areaId:6
+    },   
+    {
+        id: 7,
+        name: "Tiger King",
+        email: "",
+        areaId:1
     }],
     //area array of objs
     Areas: [
         { id: 1, location:"northeast",  name: "Chamfort River"},
-        { id: 2, location:"northern",  name: "Lost WolfHiking Trail"},
+        { id: 2, location:"northern",  name: "Lost Wolf Hiking Trail"},
         { id: 3, location:"northwest",  name: "Lodge"},
         { id: 4, location:"southwest",  name: "Gander River"},
         { id: 5, location:"southern",  name: "Campgrounds"},
