@@ -4,7 +4,7 @@ import { getGuest } from "./database.js";
 const guests = getGuest()
 //const areas = getAreas()
 
-//export new Guests func to iterate guest obj and interpolate string w guest.name values  
+//export new Guests func to iterate guest obj and interpolate string w guest.name values for the Current Park guest (asidebar)
 export const Guests = () => {
     //create let var  
     let guestHTML = `<ul>`
@@ -19,12 +19,14 @@ export const Guests = () => {
     return guestHTML
 }
 
- const guestAreaArray = () => {
-    let areaOfGuests = []
+//func to iterate how many guest are in each area
+ export const guestsPerArea = (area) => {
+    let guestsOfArea = 0
     for (const guest of guests) {
-        if(guest.areaId){
-            areaOfGuests.push(guest.areaId)
+        if(guest.areaId === area.id){
+           ++ guestsOfArea
     
         }
-    } return areaOfGuests
+        //returns array of areaId of guest
+    } return guestsOfArea
 }

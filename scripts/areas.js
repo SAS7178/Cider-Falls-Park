@@ -1,9 +1,9 @@
 // function that receives a parameter of an area object and
 // returns an array with the id of each service offered
 import { getAreas } from "./database.js";
+import { guestsPerArea } from "./guest.js";
 import { servicesByArea } from "./services.js";
 import { serviceNames } from "./services.js";
-//import { guestsPerArea } from "./guests.js";
 
 const areas = getAreas()
 

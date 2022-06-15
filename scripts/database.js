@@ -1,4 +1,6 @@
+//local database object of arrays
 const database = {
+    //Guests array of obj key: values
     Guests: [{
         id: 1,
         name: "Bill Smith",
@@ -35,6 +37,7 @@ const database = {
         email: "",
         areaId:6
     }],
+    //area array of objs
     Areas: [
         { id: 1, location:"northeast",  name: "Chamfort River"},
         { id: 2, location:"northern",  name: "Lost WolfHiking Trail"},
@@ -43,26 +46,28 @@ const database = {
         { id: 5, location:"southern",  name: "Campgrounds"},
         { id: 6, location:"southeast", name: "Pine Bluff Trails"}
     ],
+    //areaservices array of objects
     AreaServices: [
-        { id: 1, areaId:1, servicesId: 1},
-        { id: 2, areaId:1, servicesId: 2},
-        { id: 3, areaId:1, servicesId: 3},
-        { id: 4, areaId:2, servicesId: 9},
-        { id: 5, areaId:2, servicesId: 4},
-        { id: 6, areaId:2, servicesId: 5},
-        { id: 7, areaId:3, servicesId: 6},
-        { id: 8, areaId:3, servicesId: 7},
-        { id: 9, areaId:3, servicesId: 8},
-        { id: 10, areaId:3, servicesId: 4},
-        { id: 11, areaId:4, servicesId: 3},
-        { id:12, areaId:4, servicesId: 9},
-        { id:13, areaId:5, servicesId: 8},
-        { id:14, areaId:5, servicesId: 6},
-        { id:15, areaId:5, servicesId: 7},
-        { id:16, areaId:6, servicesId: 9},
-        { id:17, areaId:6, servicesId: 4},
-        { id:18, areaId:6, servicesId: 10}
+        { id: 1, areaId: 1, servicesId: 1},
+        { id: 2, areaId: 1, servicesId: 2},
+        { id: 3, areaId: 1, servicesId: 3},
+        { id: 4, areaId: 2, servicesId: 9},
+        { id: 5, areaId: 2, servicesId: 4},
+        { id: 6, areaId: 2, servicesId: 5},
+        { id: 7, areaId: 3, servicesId: 6},
+        { id: 8, areaId: 3, servicesId: 7},
+        { id: 9, areaId: 3, servicesId: 8},
+        { id: 10, areaId: 3, servicesId: 4},
+        { id: 11, areaId: 4, servicesId: 3},
+        { id: 12, areaId: 4, servicesId: 9},
+        { id: 13, areaId: 5, servicesId: 8},
+        { id: 14, areaId: 5, servicesId: 6},
+        { id: 15, areaId: 5, servicesId: 7},
+        { id: 16, areaId: 6, servicesId: 9},
+        { id: 17, areaId: 6, servicesId: 4},
+        { id: 18, areaId: 6, servicesId: 10}
     ],
+    //services array of objcts
     Services: [
         { id:1, name:"rafting"},
         { id:2, name:"canoeing"},
@@ -77,7 +82,7 @@ const database = {
     ]
 }
 
-
+//export function of each array mapped to access each object  key:values  
 export const getServices = () => {
     return database.Services.map(Service => ({ ...Service }))
 }

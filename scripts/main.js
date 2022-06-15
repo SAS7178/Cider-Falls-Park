@@ -1,7 +1,5 @@
 //import functions needed
 import { Guests } from "./guest.js";
-//import { getGuest } from "./database.js";
-//import { servicesHTML } from "./services.js";
 import { areasHTML } from "./areas.js";
 
 const mainContainer = document.querySelector("#container")
