@@ -1,5 +1,4 @@
-// function that receives a parameter of an area object and
-// returns an array with the id of each service offered
+
 import { getAreas } from "./database.js";
 import { guestsPerArea } from "./guest.js";
 import { servicesByArea } from "./services.js";
@@ -8,15 +7,15 @@ import { serviceNames } from "./services.js";
 const areas = getAreas()
 
 
-// func that iterate areas array and returns location names in a list
-export const areasList = () => {
-    let areasHTML = "<ul>"
+//func that iterate areas array and returns location names in a list
+// export const areasList = () => {
+//     let areasHTML = "<ul>"
 
-    for (const area of areas) {
-        areasHTML += `<li>${area.location}</li>`
-    } areasHTML += "<ul>"
-    return areasHTML
-}
+//     for (const area of areas) {
+//         areasHTML += `<li>${area.location}</li>`
+//     } areasHTML += "<ul>"
+//     return areasHTML
+// }
 
 // Event Listener that window alerts a message containing the number of guests in a given area
 document.addEventListener(

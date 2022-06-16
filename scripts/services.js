@@ -1,5 +1,6 @@
-import { getServices } from "./database.js";
+import { getAreas, getServices } from "./database.js";
 import { getAreaServices } from "./database.js";
+
 // set functions to vars
 const areaServices = getAreaServices()
 const services = getServices()
@@ -33,8 +34,11 @@ export const servicesHTML = (filteredServices) => {
     return serviceHTML
 }
 
+/////////////////////////////
+
+
 // function that receives a parameter of an area object and
-// returns an array with the id of each service offered
+// returns an array with the id of each service offered at each area
 export const servicesByArea = (area) =>{
     let filteredAreaServices = []
     for (const areaService of areaServices) {
@@ -42,20 +46,59 @@ export const servicesByArea = (area) =>{
             filteredAreaServices.push(areaService.servicesId)
         }
     }
+    //return array of each areas serviceids
     return filteredAreaServices
 }
-// function that receives a parameter of a filtered services array from the
-// servicesByArea function and returns an html string of those services
-export const serviceNames = (filteredServices) =>{
+// function that receives a parameter of a filteredServices array of serviceids from the
+// servicesByArea
+export const serviceNames = (filteredServices) => {
+    //var to hold string list of service names
     let offeredServices = `<ul>`;
+    //iterate thru array to see serviceid  
     for (const serviceId of filteredServices) {
+        //then thru services to see if service.id is same 
         for (const service of services) {
             if(serviceId === service.id){
-                offeredServices += `<li class="service--${service.id}">${service.name}</li>`
+                //and if true interpolate the service name into the string
+                offeredServices += `<li id=service--${service.id}">${service.name}</li>`
             }
         }
     }
     offeredServices += `</ul>`
+    //return the string
     return offeredServices
 }
+
+////////////////////////////
+
+
+//addeventlistener-call back func w click, and func as para 
+document.addEventListener("click",(clickEvent) => {
+    const itemClicked = clickEvent.target
+    if (itemClicked.id.startsWith("service")) {
+        const [,serviceId] = itemClicked.id.split("--")
+       
+          const areas = getAreas()
+         for (const area of areas) {
+        for (const service of services) {
+            if (service.id === parseInt(serviceId)) {
+                const assignments = servicesByArea(area)
+                const areas = serviceNames(assignments)
+
+                window.alert(`${service.name} services are available in ${areas}`)
+            }
+        }
+    }}
+})
+
+
+
+
+
+
+
+
+
+
+
 
