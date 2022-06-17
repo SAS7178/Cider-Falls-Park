@@ -19,9 +19,6 @@ background-color: rgb(189, 237, 179);
     background-color:#0df695;
 }
 .area__card {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     border: 3px solid;
     border-color: #23e090;
     width: 25%;
@@ -35,7 +32,7 @@ main{
 .main_page {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
 }
 img {display: flex;
@@ -46,7 +43,7 @@ img {display: flex;
 .areaList {    
     display: flex;
     flex-flow: row wrap;
-   justify-content: space-evenly;
+   justify-content: left;
    width: 75%;
    gap: 1em;
    margin-top: 1em;
@@ -56,10 +53,18 @@ img {display: flex;
  .footer {
     display: flex;
     flex-direction: column;
-    background-color: #23e090;
+    background-color: #2ad08b;
     margin-top: 2em;
+    border-radius: 50%;
+    min-width: -webkit-fill-available;
 }
-
+ #Park_Services {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-display: bolder
+    ;
+ }
 
 
 
@@ -68,4 +73,19 @@ img {display: flex;
   border-color: #a0f4d2;
   padding-left: 1rem;
   width: 15%;
+}
+#services {
+    display: flex;
+    justify-content: space-between;  
+}
+.contact_info {
+    display: flex;
+    justify-content: center;
+}
+.center {
+    display: flex;
+    justify-content: space-around;
+}
+.tables {
+    display: contents;
 }

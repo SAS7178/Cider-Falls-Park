@@ -18,8 +18,7 @@ const areas = getAreas()
 // }
 
 // Event Listener that window alerts a message containing the number of guests in a given area
-document.addEventListener(
-    "click",
+document.addEventListener("click",
     (clickEvent) => {
         const itemClicked = clickEvent.target
         if (itemClicked.id.startsWith("area")) {
